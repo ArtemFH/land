@@ -1,19 +1,19 @@
 import {Outlet} from "react-router-dom";
 import NavBar from "../components/header/navbar";
-import {Grid} from "@mui/material";
+import {Box, Container, Grid} from "@mui/material";
 
 function Layout() {
     return (
-        <Grid container direction="column">
-            <Grid item>
+        <Container>
+            <Box>
                 <NavBar/>
-            </Grid>
-            <Grid container>
-                <Grid item xs={12}>
+            </Box>
+            <Box>
+                <Box>
                     <Outlet/>
-                </Grid>
-            </Grid>
-        </Grid>
+                </Box>
+            </Box>
+        </Container>
     );
 }
 
