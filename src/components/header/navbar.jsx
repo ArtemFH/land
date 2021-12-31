@@ -1,19 +1,24 @@
-import {Button, Grid} from "@mui/material";
+import {Box, Button} from "@mui/material";
 import {Link} from "react-router-dom";
 import logo from "./image/logo.svg"
+import {styled} from "@mui/system";
+
+const styledPaper = styled()
 
 function NavBar() {
     return (
-        <Grid style={{
+        <Box style={{
             display: "flex",
             justifyContent: "space-around",
             height: "50px",
             padding: "30px 115px"
         }}>
-            <Grid>
-                <img src={logo} alt={''}/>
-            </Grid>
-            <Grid style={{
+            <Link style={{textDecoration: "none"}} to={''}>
+                <Box>
+                    <img src={logo} alt={''}/>
+                </Box>
+            </Link>
+            <Box style={{
                 width: "410px",
                 display: "flex",
                 justifyContent: "space-between"
@@ -32,8 +37,8 @@ function NavBar() {
                         color: "#FFFFFF"
                     }}>Download</Button>
                 </Link>
-            </Grid>
-        </Grid>
+            </Box>
+        </Box>
     )
 }
 
