@@ -1,10 +1,10 @@
 import {Outlet} from "react-router-dom";
 import NavBar from "../components/header/navbar";
-import {Box, Container} from "@mui/material";
+import {Box} from "@mui/material";
 
 function Layout() {
     return (
-        <Container>
+        <>
             <Box>
                 <NavBar/>
             </Box>
@@ -13,7 +13,7 @@ function Layout() {
                     <Outlet/>
                 </Box>
             </Box>
-        </Container>
+        </>
     );
 }
 
