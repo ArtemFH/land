@@ -3,10 +3,6 @@ import {Link} from "react-router-dom";
 import logo from "./image/logo.svg"
 import {styled} from "@mui/system";
 
-const StyledDiv = styled('div')({
-    backgroundColor: "yellow",
-})
-
 function NavBar() {
     return (
         <StyledDiv>
@@ -17,22 +13,20 @@ function NavBar() {
                 padding: "30px 115px"
             }}>
                 <Link style={{textDecoration: "none"}} to={''}>
-                    <Box>
-                        <img src={logo} alt={''}/>
-                    </Box>
+                    <img src={logo} alt={''}/>
                 </Link>
                 <Box style={{
                     width: "410px",
                     display: "flex",
                     justifyContent: "space-between"
                 }}>
-                    <Link style={{textDecoration: "none"}} to={'stores'}>
+                    <Link style={ButtonStyle} to={'stores'}>
                         <Button>Stores</Button>
                     </Link>
-                    <Link style={{textDecoration: "none"}} to={'help-support'}>
+                    <Link style={ButtonStyle} to={'help-support'}>
                         <Button>Help & Support</Button>
                     </Link>
-                    <Link style={{textDecoration: "none"}} to={'download'}>
+                    <Link style={ButtonStyle} to={'download'}>
                         <Button style={{
                             height: "50px",
                             width: "120px",
@@ -47,3 +41,12 @@ function NavBar() {
 }
 
 export default NavBar;
+
+const StyledDiv = styled('div')({
+    backgroundColor: "yellow",
+})
+
+const ButtonStyle = {
+    textDecoration: "none",
+    display: "grid"
+}
