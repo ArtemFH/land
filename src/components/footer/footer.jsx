@@ -1,55 +1,59 @@
 import styled from "styled-components";
-import {Link} from "react-router-dom";
-import {Box, Button} from "@mui/material";
+import {Box} from "@mui/material";
+import logo from "./images/Logo.svg"
+import leftLeaf from "./images/LeftLeaf.svg"
+import rightLeaf from "./images/RightLeaf.svg"
 
-function NavBar() {
+function Footer() {
     return (
-        <Links>
-            <UrlBox>
-                <Url to={'stores'}>
-                    <ButUrl>Stores</ButUrl>
-                </Url>
-                <Url to={'help-support'}>
-                    <ButUrl>Help & Support</ButUrl>
-                </Url>
-                <Url to={'download'}>
-                    <ButDown>Download</ButDown>
-                </Url>
-            </UrlBox>
-        </Links>
+        <FooterLayout>
+            <Box>
+                <img src={logo} alt={''}/>
+                <Box>
+                    <ul>
+                        <li>Company</li>
+                        <li>Merchant Portal</li>
+                    </ul>
+                    <ul>
+                        <li>Support</li>
+                        <li>FAQ</li>
+                        <li>Terms of Service</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                    <ul>
+                        <li>Follow Us</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Facebook</li>
+                    </ul>
+                </Box>
+            </Box>
+            <BackgroundFooter>
+                <img src={leftLeaf} alt={''}/>
+                <img src={rightLeaf} alt={''}/>
+            </BackgroundFooter>
+        </FooterLayout>
     )
 }
 
-export default NavBar;
+export default Footer;
 
-const Links = styled(Box)`
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
-  padding: 30px 115px;
+const FooterLayout = styled(Box)`
+  width: 1440px;
+  height: 300px;
+  background-color: #263238;
 `
 
-const Url = styled(Link)`
-  text-decoration: none;
-  display: grid;
-`
+const BackgroundFooter = styled(Box)`
+  position: relative;
 
-const ButUrl = styled(Button)`
-  text-transform: none;
-  font-size: 14px;
-  color: #000000;
-`
+  & :first-child {
+    position: absolute;
+    left: 0;
+  }
 
-const ButDown = styled(ButUrl)`
-  height: 50px;
-  width: 120px;
-  background-color: #0F2336;
-  color: #FFFFFF;
-  border-radius: 8px;
-`
-
-const UrlBox = styled(Box)`
-  width: 410px;
-  display: flex;
-  justify-content: space-between;
+  & :last-child {
+    position: absolute;
+    right: 0;
+  }
 `

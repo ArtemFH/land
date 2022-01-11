@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 yarn.lock
+yarn-error.log
+package-lock.json
 .idea
 
 # testing

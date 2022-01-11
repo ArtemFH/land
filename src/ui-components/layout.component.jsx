@@ -18,12 +18,12 @@ function Layout() {
 
 export default Layout;
 
-const Container = styled.div`
+const Container = styled('div')`
   width: 1210px;
   margin: 0 auto;
 `
 
-const Section = styled.div`
+const Section = styled('div')`
   width: 1440px;
   margin: 0 auto;
   background-color: #F5F6F7;

@@ -13,9 +13,9 @@ function IndexHome() {
                 </TypoIndex>
                 <ButtonIndex variant="contained">Discover how<img src={arrow} alt={''}/></ButtonIndex>
             </BoxIndex>
-            <Imgs>
+            <Img>
                 <img src={couple} alt={''}/>
-            </Imgs>
+            </Img>
         </Container>
     )
 }
@@ -63,7 +63,7 @@ const TypoIndex = styled(Box)`
   }
 `
 
-const Imgs = styled('div')`
+const Img = styled('div')`
   position: absolute;
   right: -30px;
   height: 100%;
