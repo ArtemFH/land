@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {Box, Button} from "@mui/material";
-import logo from "./image/Logo.svg"
 
 function NavBar() {
     return (
         <Links>
-            <Url to={''}>
-                <img src={logo} alt={''}/>
-            </Url>
             <UrlBox>
                 <Url to={'stores'}>
                     <ButUrl>Stores</ButUrl>
@@ -30,7 +26,7 @@ const Links = styled(Box)`
   display: flex;
   justify-content: space-between;
   height: 50px;
-  padding: 30px 50px;
+  padding: 30px 115px;
 `
 
 const Url = styled(Link)`

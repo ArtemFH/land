@@ -1,4 +1,4 @@
-import {Download, HelpSupport, Index, Stores} from "./pages";
+import {Download, HelpSupport, Home, Stores} from "./pages";
 import {Layout} from "./components";
 
 export const routes = [
@@ -8,7 +8,7 @@ export const routes = [
         children: [
             {
                 path: "",
-                element: <Index/>
+                element: <Home/>
             }, {
                 path: "stores",
                 element: <Stores/>

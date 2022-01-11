@@ -1,7 +1,9 @@
+import IndexHome from "../components/home/indexHome";
+
 function Index() {
     return (
         <>
-            Index
+            <IndexHome/>
         </>
     )
 }

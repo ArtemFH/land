@@ -7,10 +7,10 @@
     "react-dom": "*",
     "react-scripts": "*",
     "@mui/material": "*",
-    "@mui/system": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "react-router-dom": "*"
+    "react-router-dom": "*",
+    "styled-components": "*"
   },
   "scripts": {
     "start": "react-scripts start",

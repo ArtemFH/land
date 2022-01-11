@@ -7,7 +7,7 @@ import {StyledEngineProvider} from '@mui/material/styles';
 ReactDOM.render(
     <React.StrictMode>
         <BrowserRouter>
-            <StyledEngineProvider>
+            <StyledEngineProvider injectFirst>
                 <App/>
             </StyledEngineProvider>
         </BrowserRouter>
