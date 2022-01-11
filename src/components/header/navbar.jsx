@@ -27,21 +27,23 @@ function NavBar() {
 export default NavBar;
 
 const Links = styled(Box)`
-  display: flex;
-  justify-content: space-between;
   height: 50px;
+  width: 1210px;
+  display: flex;
+  margin: 0 auto;
   padding: 30px 50px;
+  justify-content: space-between;
 `
 
 const Url = styled(Link)`
-  text-decoration: none;
   display: grid;
+  text-decoration: none;
 `
 
 const ButUrl = styled(Button)`
-  text-transform: none;
-  font-size: 14px;
   color: #000000;
+  font-size: 14px;
+  text-transform: none;
 `
 
 const ButDown = styled(ButUrl)`

@@ -7,8 +7,10 @@ import rightLeaf from "./images/RightLeaf.svg"
 function Footer() {
     return (
         <FooterLayout>
-            <Box>
-                <img src={logo} alt={''}/>
+            <Detail>
+                <Box>
+                    <img src={logo} alt={''}/>
+                </Box>
                 <Box>
                     <ul>
                         <li>Company</li>
@@ -27,33 +29,78 @@ function Footer() {
                         <li>Facebook</li>
                     </ul>
                 </Box>
-            </Box>
-            <BackgroundFooter>
+            </Detail>
+            <BackgroundDetail>
                 <img src={leftLeaf} alt={''}/>
                 <img src={rightLeaf} alt={''}/>
-            </BackgroundFooter>
+            </BackgroundDetail>
         </FooterLayout>
     )
 }
 
 export default Footer;
 
-const FooterLayout = styled(Box)`
-  width: 1440px;
+const FooterLayout = styled('footer')`
   height: 300px;
+  position: relative;
   background-color: #263238;
 `
 
-const BackgroundFooter = styled(Box)`
+const Detail = styled(Box)`
+  z-index: 1;
   position: relative;
+  padding: 55px 250px 0 250px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+
+  li {
+    opacity: .7;
+    color: #FFFFFF;
+    font-size: 14px;
+    list-style: none;
+    padding: 5px;
+  }
+
+  li:first-child {
+    opacity: 1;
+    color: #00CCCC;
+    font-size: 12px;
+    font-weight: bold;
+    padding-bottom: 13px;
+  }
+
+  & {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & div:first-child {
+    width: 50%;
+  }
+
+  & div:last-child {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  & div:first-child img {
+    width: 130px;
+  }
+`
+
+const BackgroundDetail = styled(Box)`
+  width: 100%;
 
   & :first-child {
-    position: absolute;
     left: 0;
+    top: -60px;
+    position: absolute;
   }
 
   & :last-child {
-    position: absolute;
     right: 0;
+    bottom: 0;
+    position: absolute;
   }
 `

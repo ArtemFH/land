@@ -11,7 +11,8 @@ function IndexHome() {
                     <Typography>Order ahead</Typography>
                     <Typography>and earn rewards for every purchase</Typography>
                 </TypoIndex>
-                <ButtonIndex variant="contained">Discover how<img src={arrow} alt={''}/></ButtonIndex>
+                <ButtonIndex variant="contained">Discover how<img src={arrow} alt={''}/>
+                </ButtonIndex>
             </BoxIndex>
             <Img>
                 <img src={couple} alt={''}/>
@@ -23,9 +24,11 @@ function IndexHome() {
 export default IndexHome;
 
 const Container = styled(Box)`
-  display: flex;
-  position: relative;
   height: 610px;
+  display: flex;
+  width: 1210px;
+  margin: 0 auto;
+  position: relative;
 `
 
 const BoxIndex = styled(Box)`
@@ -39,11 +42,20 @@ const BoxIndex = styled(Box)`
 const ButtonIndex = styled(Button)`
   width: 208px;
   height: 60px;
+  display: flex;
   color: #0F2336;
+  font-size: 18px;
   margin-top: 50px;
+  font-weight: 700;
   border-radius: 14px;
+  text-transform: none;
   background-color: #00CCCC;
-  box-shadow: 0px 3px 18px 0px rgba(0, 201, 201, 0.55);
+  justify-content: space-evenly;
+  box-shadow: 0 3px 18px 0 rgba(0, 201, 201, 0.55);
+
+  &:hover {
+    background-color: #00ABAB;
+  }
 `
 
 const TypoIndex = styled(Box)`

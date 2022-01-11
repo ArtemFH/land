@@ -6,22 +6,14 @@ import Footer from "../components/footer/footer";
 function Layout() {
     return (
         <Section>
-            <Container>
-                <NavBar/>
-                <Outlet/>
-            </Container>
+            <NavBar/>
+            <Outlet/>
             <Footer/>
         </Section>
-
     );
 }
 
 export default Layout;
-
-const Container = styled('div')`
-  width: 1210px;
-  margin: 0 auto;
-`
 
 const Section = styled('div')`
   width: 1440px;
