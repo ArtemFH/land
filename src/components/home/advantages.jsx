@@ -14,10 +14,11 @@ function Advantages(props) {
 export default Advantages;
 
 const Card = styled(Box)`
-  width: 325px;
+  width: 33%;
   height: 225px;
   display: flex;
   text-align: center;
+  margin: 30px auto;
   flex-direction: column;
   justify-content: center;
   font-family: Roboto, sans-serif;

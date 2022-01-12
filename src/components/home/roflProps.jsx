@@ -2,6 +2,7 @@ import {Box} from "@mui/material";
 import styled from "styled-components"
 import Advantages from "./advantages";
 import logo from "./image/Arrow.svg"
+import {useState} from "react";
 
 const ObjAdvantages = [
     {
@@ -22,10 +23,20 @@ const ObjAdvantages = [
 ]
 
 function RoflProps() {
+    // useEffect(() => {
+    //     console.table(object);
+    // }, [object]);
+
+    const [object, setObject] = useState(ObjAdvantages);
+
+    const mixer = () => {
+        setObject([...object.sort(() => Math.random() - 0.5)]);
+    }
+
     return (
-        <Container>
-            {ObjAdvantages.map((item, key) =>
-                <Advantages key={key} data={item}/>)}
+        <Container onClick={mixer}>
+            {/*<pre>{JSON.stringify(object, undefined, 2)}</pre>*/}
+            {object.map((item, key) => <Advantages key={key} data={item}/>)}
         </Container>
     )
 }
@@ -33,9 +44,10 @@ function RoflProps() {
 export default RoflProps;
 
 const Container = styled(Box)`
-  height: 410px;
+  min-height: 410px;
   width: 1440px;
   display: flex;
+  flex-wrap: wrap;
   background-color: #FFFFFF;
   align-items: center;
   justify-content: space-evenly;
