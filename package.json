@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "*",
+    "axios": "*",
     "react-dom": "*",
     "react-scripts": "*",
     "@mui/material": "*",

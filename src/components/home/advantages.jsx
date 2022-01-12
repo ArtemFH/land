@@ -4,9 +4,9 @@ import {Box} from "@mui/material";
 function Advantages(props) {
     return (
         <Card>
-            <img src={props.data.image} alt={''}/>
-            <p id={'title'}>{props.data.title}</p>
-            <p id={'description'}>{props.data.description}</p>
+            {/*<img src={props.data.image} alt={''}/>*/}
+            <p id={'title'}>{props.data.name}</p>
+            <p id={'description'}>{props.data.email}</p>
         </Card>
     )
 }

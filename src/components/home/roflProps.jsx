@@ -1,33 +1,21 @@
 import {Box} from "@mui/material";
 import styled from "styled-components"
 import Advantages from "./advantages";
-import logo from "./image/Arrow.svg"
-import {useState} from "react";
-
-const ObjAdvantages = [
-    {
-        image: logo,
-        title: "Order ahead, skip the line",
-        description: "Feel like a rock star when you bypass the line and save a bunch of time."
-    },
-    {
-        image: logo,
-        title: "Bonus and discounts",
-        description: "You can enjoy lots of discounts from the selected stores, or accumulate points."
-    },
-    {
-        image: logo,
-        title: "Share with your friends",
-        description: "Send gifts to your friends and family, and pick up for your coworkers when they can't get away ."
-    }
-]
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 function RoflProps() {
     // useEffect(() => {
     //     console.table(object);
     // }, [object]);
 
-    const [object, setObject] = useState(ObjAdvantages);
+    const [object, setObject] = useState([]);
+
+    useEffect(() => {
+        axios.get(`https://jsonplaceholder.typicode.com/users`).then(res => {
+            setObject(res.data);
+        })
+    }, [setObject]);
 
     const mixer = () => {
         setObject([...object.sort(() => Math.random() - 0.5)]);

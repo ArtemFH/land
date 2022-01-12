@@ -1,3 +1,5 @@
+import RoflProps from "../components/home/roflProps";
+
 function Stores() {
     return (
         <>
