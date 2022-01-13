@@ -11,8 +11,7 @@ function IndexHome() {
                     <Typography>Order ahead</Typography>
                     <Typography>and earn rewards for every purchase</Typography>
                 </TypoIndex>
-                <ButtonIndex variant="contained">Discover how<img src={arrow} alt={''}/>
-                </ButtonIndex>
+                <ButtonIndex variant="contained">Discover how<img src={arrow} alt={''}/></ButtonIndex>
             </BoxIndex>
             <Img>
                 <img src={couple} alt={''}/>

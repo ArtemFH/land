@@ -4,7 +4,13 @@ import {useState} from "react";
 import axios from "axios";
 
 function Login() {
-    const [data, setData] = useState('');
+
+    const [data, setData] = useState({
+        email: '',
+        city: '',
+        country: '',
+        firstName: ''
+    });
 
     const obj = {
         email: "tulyavkoilya@yandex.ru",
@@ -44,7 +50,10 @@ function Login() {
             </div>
             <div>
                 <button onClick={setToken} disabled={!data.token} type="submit">Get</button>
-                {data.email}
+                <p>{data.email}</p>
+                <p>{data.city}</p>
+                <p>{data.country}</p>
+                <p>{data.firstName}</p>
             </div>
         </Container>
     )
