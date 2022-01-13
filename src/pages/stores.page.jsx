@@ -1,9 +1,9 @@
-import RoflProps from "../components/home/roflProps";
+import Login from "../components/spa/login";
 
 function Stores() {
     return (
         <>
-            Stores
+            <Login/>
         </>
     )
 }

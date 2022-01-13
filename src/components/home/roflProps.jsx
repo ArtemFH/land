@@ -5,9 +5,6 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 
 function RoflProps() {
-    // useEffect(() => {
-    //     console.table(object);
-    // }, [object]);
 
     const [object, setObject] = useState([]);
 

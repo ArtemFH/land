@@ -5,10 +5,12 @@ import App from './App';
 import {StyledEngineProvider} from '@mui/material/styles';
 
 ReactDOM.render(
-    <BrowserRouter>
-        <StyledEngineProvider injectFirst>
-            <App/>
-        </StyledEngineProvider>
-    </BrowserRouter>,
+    <React.StrictMode>
+        <BrowserRouter>
+            <StyledEngineProvider injectFirst>
+                <App/>
+            </StyledEngineProvider>
+        </BrowserRouter>
+    </React.StrictMode>,
     document.getElementById('root')
 );
