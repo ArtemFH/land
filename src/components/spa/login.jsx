@@ -49,8 +49,11 @@ function Login() {
         setData({...data, [event.target.name]: value});
     }
 
+    // const [loading, setLoading] = useState(false);
+
     const postUser = (event) => {
         event.preventDefault();
+        // setLoading(true);
         axios.post(`https://api.englishpatient.org/login`, {...data}, {
             headers: {
                 'Content-Type': 'application/json'
@@ -77,41 +80,45 @@ function Login() {
             setUser(res.data);
         }).catch((error) => {
             console.error(error)
-        })
+        });
     }
 
     return (
         <Container>
             {token.token && <User user={user}/>}
-            {!token.token && <form onSubmit={postUser}>
-                <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="email"
-                    name="email"
-                    label="Email"
-                    onChange={handleChange}
-                    autoFocus
-                />
-                <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    name="password"
-                    type="password"
-                    label="Password"
-                    onChange={handleChange}
-                />
-                <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    sx={{mt: 3, mb: 2}}
-                >
-                    Sign In
-                </Button>
-            </form>}
+            {!token.token &&
+                // (!loading ?
+                <form onSubmit={postUser}>
+                    <TextField
+                        margin="normal"
+                        required
+                        fullWidth
+                        id="email"
+                        name="email"
+                        label="Email"
+                        onChange={handleChange}
+                        autoFocus
+                    />
+                    <TextField
+                        margin="normal"
+                        required
+                        fullWidth
+                        name="password"
+                        type="password"
+                        label="Password"
+                        onChange={handleChange}
+                    />
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{mt: 3, mb: 2}}
+                    >
+                        Sign In
+                    </Button>
+                </form>
+                // : <img src={'https://thumbs.gfycat.com/ArtisticShoddyKudu-size_restricted.gif'} alt={''}/>)
+            }
         </Container>
     )
 }
