@@ -6,6 +6,7 @@
     "react": "*",
     "axios": "*",
     "react-dom": "*",
+    "react-redux": "*",
     "react-scripts": "*",
     "@mui/material": "*",
     "@emotion/react": "*",
