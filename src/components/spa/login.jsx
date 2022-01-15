@@ -1,4 +1,4 @@
-import {Box, TextField, Button} from "@mui/material";
+import {Box, TextField, Button, Alert} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import styled from "styled-components"
 import {useEffect, useState} from "react";
@@ -64,6 +64,8 @@ function Login() {
                 localStorage.setItem("token", tk)
                 addToken(tk)
                 setToken()
+            } else {
+                setAlert(true);
             }
         }).catch((error) => {
             console.error(error)
@@ -82,6 +84,8 @@ function Login() {
             console.error(error)
         });
     }
+
+    const [alert, setAlert] = useState(false);
 
     return (
         <Container>
@@ -108,6 +112,9 @@ function Login() {
                         label="Password"
                         onChange={handleChange}
                     />
+                    {alert && <Alert variant="outlined" severity="error" fullWidth onClose={() => {
+                        setAlert(false)
+                    }}>This is a success alert — check it out!</Alert>}
                     <Button
                         type="submit"
                         fullWidth
